@@ -121,8 +121,15 @@
               "devServerTarget": "codehub-webinar:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+           "baseHref": "angular-starter-webinar"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "codehub-webinar"
 }

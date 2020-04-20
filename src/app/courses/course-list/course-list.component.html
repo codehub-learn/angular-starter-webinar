@@ -1,7 +1,14 @@
-<p *ngFor="let course of courses">
-  {{course.title}}
-  {{course.description}}
-  {{course.scheduleDate}}
-  {{course.price}}
-  {{course.image}}
-</p>
+<div class="row">
+  <div *ngFor="let course of courses" class="card col-sm-3">
+    <img src="assets/{{course.image}}" class="card-img-top" [alt]="course.title">
+    <div class="card-body">
+      <h5 class="card-title">{{course.title}}</h5>
+      <p class="card-text">{{course.description}}.</p>
+      <button class="btn btn-primary">Show details</button>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Price: {{course.price | currency:'EUR'}}</li>
+      <li class="list-group-item">When: {{course.scheduleDate || 'TBA'}}</li>
+    </ul>
+  </div>
+</div>
