@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 interface Course {
   title: string;
   description: string;
-  scheduleDate?: string;
+  scheduleDate?: Date;
   price?: number;
   image: string;
 }
@@ -14,6 +14,7 @@ interface Course {
   styleUrls: ['./course-list.component.scss']
 })
 export class CourseListComponent implements OnInit {
+  selectedCourse: Course;
 
   courses: Course[] = [
     {
@@ -31,35 +32,35 @@ export class CourseListComponent implements OnInit {
     {
       title: 'Architecting on AWS',
       description: 'Participants will have a unique hands-on experience by using  cutting edge AWS technologies and AWS platform features.',
-      scheduleDate: 'February 2020',
+      scheduleDate: new Date(2018, 3, 10),
       price: 780,
       image: 'Architecting-on-AWS.jpg'
     },
     {
       title: 'Docker & Kubernetes',
       description: 'Docker & Kubernetes',
-      scheduleDate: 'March 2020',
+      scheduleDate: new Date(2018, 4, 10),
       price: 350,
       image: 'docker-kubernetes.jpg'
     },
     {
       title: 'Microservices with Spring Boot & Spring Cloud',
       description: 'Microservices with Spring Boot & Spring Cloud',
-      scheduleDate: 'April 2020',
+      scheduleDate: new Date(2019, 4, 10),
       price: 400,
       image: 'spring-cloud.png'
     },
     {
       title: 'Ansible & Terraform',
       description: 'Ansible & Terraform',
-      scheduleDate: 'April 2020',
+      scheduleDate: new Date(2019, 8, 20),
       price: 300,
       image: 'mastering.png'
     },
     {
       title: 'Advanced Selenium Automation Testing',
       description: 'Advanced Selenium Automation Testing',
-      scheduleDate: 'April 2020',
+      scheduleDate: new Date(2020, 8, 20),
       price: 350,
       image: 'selenium.png'
     }
