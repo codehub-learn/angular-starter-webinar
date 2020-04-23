@@ -2,6 +2,8 @@
   "recommendations": [
     "johnpapa.angular-essentials",
     "formulahendry.auto-rename-tag",
-    "christian-kohler.path-intellisense"
+    "christian-kohler.path-intellisense",
+    "coenraads.bracket-pair-colorizer",
+    "eamodio.gitlens"
   ]
 }
