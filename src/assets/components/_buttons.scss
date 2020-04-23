@@ -1,0 +1,24 @@
+$button-colors: (
+  'primary': $blue,
+  'secondary': $green,
+  'error': $red
+);
+
+.ch-btn {
+
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #ffffff;
+
+  @each $name, $color in $button-colors {
+    &-#{$name} {
+      background-color: $color;
+
+      &:hover {
+        background-color: darken($color, 8%);
+      }
+    }
+  }
+}

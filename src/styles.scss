@@ -1,3 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap/scss/bootstrap.scss'
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import './assets/base/typography';
+
+@import './assets/components/buttons';
+@import './assets/components/tables';
+
+@import './assets/helpers/mixins';
+@import './assets/helpers/variables';
+
+@import './assets/layout/forms';
+
+@import './assets/themes/theme';

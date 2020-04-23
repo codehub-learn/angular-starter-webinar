@@ -14,15 +14,15 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">{{selectedCourse.title}}</h5>
+        <h5 class="modal-title">{{selectedCourse.title | uppercase}}</h5>
         <button type="button" class="close" (click)="selectedCourse=null">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price: {{selectedCourse.price | currency:'EUR'}}</li>
-          <li class="list-group-item" *ngIf="selectedCourse.scheduleDate">When: {{selectedCourse.scheduleDate | date}}</li>
+          <li class="list-group-item"><strong>Price:</strong> {{selectedCourse.price | currency:'EUR'}}</li>
+          <li class="list-group-item" *ngIf="selectedCourse.scheduleDate"><strong>When:</strong> {{selectedCourse.scheduleDate | date}}</li>
         </ul>
       </div>
       <div class="modal-footer">
